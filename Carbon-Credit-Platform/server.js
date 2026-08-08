@@ -17,7 +17,9 @@ app.use(express.static("public"));
 
 // MongoDB Connection
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, {
+    serverSelectionTimeoutMS: 10000
+})
 .then(()=>{
 
     console.log("✅ MongoDB Connected");
@@ -25,10 +27,9 @@ mongoose.connect(process.env.MONGO_URI)
 })
 .catch((err)=>{
 
-    console.log("MongoDB Error:",err);
+    console.log("MongoDB Error:", err.message);
 
 });
-
 
 // Routes AFTER MongoDB
 

@@ -56,7 +56,7 @@ try{
 
 
 const response = await fetch(
-    "http://localhost:5000/api/leaderboard"
+    "http://carbon-credit-platform-b0nc.onrender.com/api/leaderboard"
 );
 
 
@@ -205,7 +205,7 @@ try{
 
 const response = await fetch(
 
-"http://localhost:5000/api/leaderboard"
+"http://carbon-credit-platform-b0nc.onrender.com/api/leaderboard"
 
 );
 

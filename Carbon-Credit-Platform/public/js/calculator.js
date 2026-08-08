@@ -107,7 +107,7 @@ JSON.parse(localStorage.getItem("user"));
 if(user){
 
 
-fetch("http://localhost:5000/api/carbon/save",
+fetch("http://carbon-credit-platform-b0nc.onrender.com/api/carbon/save",
 {
 
     method:"POST",

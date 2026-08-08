@@ -2,7 +2,7 @@ async function loadIndustries(){
 
 
 const response = await fetch(
-"http://localhost:5000/api/industry"
+"http://carbon-credit-platform-b0nc.onrender.com/api/industry"
 );
 
 

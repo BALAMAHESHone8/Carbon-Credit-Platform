@@ -118,7 +118,7 @@ async function loadCarbonData(){
 
         const response = await fetch(
 
-            `http://localhost:5000/api/carbon/history/${user.id}`
+            `http://carbon-credit-platform-b0nc.onrender.com/api/carbon/history/${user.id}`
 
         );
 
@@ -223,7 +223,7 @@ async function loadCharts(){
 
         const response = await fetch(
 
-            `http://localhost:5000/api/carbon/history/${user.id}`
+            `http://carbon-credit-platform-b0nc.onrender.com/api/carbon/history/${user.id}`
 
         );
 
@@ -540,7 +540,7 @@ try{
 
 
 const response = await fetch(
-    "http://localhost:5000/api/leaderboard"
+    "http://carbon-credit-platform-b0nc.onrender.com/api/leaderboard"
 );
 
 
@@ -634,7 +634,7 @@ try{
 
 const response = await fetch(
 
-"http://localhost:5000/api/industry"
+"http://carbon-credit-platform-b0nc.onrender.com/api/industry"
 
 );
 
