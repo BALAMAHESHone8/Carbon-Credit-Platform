@@ -3,6 +3,14 @@ const Carbon = require("../models/Carbon");
 
 const router = express.Router();
 
+// Test Carbon API
+router.get("/", (req, res) => {
+
+    res.json({
+        message: "Carbon API working"
+    });
+
+});
 
 // ===============================
 // SAVE CARBON DATA
