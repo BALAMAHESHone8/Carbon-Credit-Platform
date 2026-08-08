@@ -30,33 +30,18 @@ try{
 
 
 const response = await fetch(
-
-"http://carbon-credit-platform-b0nc.onrender.com/api/auth/login",
-
+"https://carbon-credit-platform-b0nc.onrender.com/api/auth/login",
 {
-
-method:"POST",
-
-headers:{
-
-"Content-Type":"application/json"
-
-},
-
-
-body:JSON.stringify({
-
-email,
-
-password
-
-})
-
+    method:"POST",
+    headers:{
+        "Content-Type":"application/json"
+    },
+    body: JSON.stringify({
+        email,
+        password
+    })
 }
-
 );
-
-
 
 const data =
 await response.json();

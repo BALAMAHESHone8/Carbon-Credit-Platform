@@ -35,7 +35,7 @@ try{
 
 const response = await fetch(
 
-"http://carbon-credit-platform-b0nc.onrender.com/api/auth/register",
+"https://carbon-credit-platform-b0nc.onrender.com/api/auth/register", 
 
 {
 
