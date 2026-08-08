@@ -41,7 +41,7 @@ async function loadWallet(){
 
         const response = await fetch(
 
-            `http://carbon-credit-platform-b0nc.onrender.com/api/carbon/history/${user.id}`
+            `https://carbon-credit-platform-b0nc.onrender.com/api/carbon/history/${user.id}`
 
         );
 
