@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Carbon Nexus AI</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- ================= BACKGROUND ================= -->
+
+<div id="background"></div>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+
+                🌿
+
+            </div>
+
+            <div>
+
+                <h2>
+
+                    Carbon Nexus AI
+
+                </h2>
+
+                <p>
+
+                    Earth Intelligence Platform
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#">Home</a>
+
+            <a href="#">Features</a>
+
+            <a href="#">Calculator</a>
+
+            <a href="#">Dashboard</a>
+
+            <button
+                class="login-btn"
+                onclick="openLogin()">
+
+                Login
+
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <div class="tag">
+
+            AI Powered Sustainability
+
+        </div>
+
+        <h1>
+
+            Track
+
+            <span>
+
+                Carbon
+
+            </span>
+
+            Smarter.
+
+        </h1>
+
+        <p>
+
+            Monitor emissions,
+            calculate carbon footprint,
+            earn carbon credits,
+            and visualize Earth's
+            health using AI.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <button
+                class="primary-btn"
+                onclick="openLogin()">
+
+                <i class="fa-solid fa-right-to-bracket"></i>
+
+                Enter Platform
+
+            </button>
+
+            <button class="secondary-btn">
+
+                <i class="fa-solid fa-circle-play"></i>
+
+                Live Demo
+
+            </button>
+
+        </div>
+
+        <div class="hero-stats">
+
+            <div>
+
+                <h2>
+
+                    1.2M+
+
+                </h2>
+
+                <p>
+
+                    kg CO₂ Saved
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h2>
+
+                    18K+
+
+                </h2>
+
+                <p>
+
+                    Users
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h2>
+
+                    530+
+
+                </h2>
+
+                <p>
+
+                    Industries
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+   <div class="earth-container">
+
+    <img
+        src="./assets/images/earth.png"
+        class="earth-image"
+        alt="Digital Earth"
+       
+>
+</div>
+
+</section>
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="section-title">
+
+        <span>Platform Features</span>
+
+        <h2>Everything You Need to Manage Carbon</h2>
+
+        <p>
+            A complete AI-powered sustainability platform for individuals,
+            businesses and industries.
+        </p>
+
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3>Individual Tracking</h3>
+
+            <p>
+
+                Calculate your daily carbon footprint using
+                transportation,
+                electricity,
+                LPG,
+                food habits,
+                renewable energy
+                and more.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-industry"></i>
+
+            <h3>Factory Monitoring</h3>
+
+            <p>
+
+                Monitor industrial emissions,
+                production,
+                coal,
+                diesel,
+                logistics
+                and sustainability performance.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Live Analytics</h3>
+
+            <p>
+
+                Interactive dashboards,
+                charts,
+                reports,
+                carbon score
+                and emission history.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h3>AI Suggestions</h3>
+
+            <p>
+
+                Receive personalized recommendations
+                to reduce emissions,
+                increase efficiency
+                and earn more carbon credits.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= DIGITAL TWIN ================= -->
+
+<section class="digital-twin">
+
+    <div class="digital-left">
+
+        <h2>
+
+            Earth's Digital Twin
+
+        </h2>
+
+        <p>
+
+            Every action updates your environmental impact in real time.
+
+            Carbon Nexus AI transforms your carbon footprint into
+
+            intelligent visual insights.
+
+        </p>
+
+        <button class="primary-btn">
+
+            Explore Dashboard
+
+        </button>
+
+    </div>
+
+    <div class="digital-right">
+
+        <img
+
+            src="assets/images/earth.png"
+
+            class="earth-image"
+
+            alt="Earth">
+
+    </div>
+
+</section>
+
+<!-- ================= STATISTICS ================= -->
+
+<section class="stats-section">
+
+    <div class="stat-card">
+
+        <h2>1.24M</h2>
+
+        <p>kg CO₂ Saved</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>18,436</h2>
+
+        <p>Users</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>534</h2>
+
+        <p>Industries</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>95%</h2>
+
+        <p>Earth Health</p>
+
+    </div>
+
+</section>
+
+<!-- ================= AI SECTION ================= -->
+
+<section class="ai-section">
+
+    <div class="glass-ai">
+
+        <span>
+
+            AI Sustainability Assistant
+
+        </span>
+
+        <h2>
+
+            Smart Carbon Insights
+
+        </h2>
+
+        <p>
+
+            Switching from a petrol car to public transport
+
+            for just
+
+            <strong>15 km/day</strong>
+
+            can reduce nearly
+
+            <strong>960 kg CO₂</strong>
+
+            every year.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>
+
+        Carbon Nexus AI
+
+    </h2>
+
+    <p>
+
+        Earth's Digital Twin Platform
+
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#">Home</a>
+
+        <a href="#">Features</a>
+
+        <a href="#">Calculator</a>
+
+        <a href="#">Dashboard</a>
+
+        <a href="#">Contact</a>
+
+    </div>
+
+    <p>
+
+        © 2026 Carbon Nexus AI. All Rights Reserved.
+
+    </p>
+
+</footer>
+<!-- ================= LOGIN MODAL ================= -->
+
+<div class="modal-overlay" id="loginModal">
+
+    <div class="login-card">
+
+        <button class="close-btn" onclick="closeLogin()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="login-header">
+
+            <h2>Welcome Back 👋</h2>
+
+            <p>Sign in to Carbon Nexus AI</p>
+
+        </div>
+
+        <form id="loginForm">
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input 
+                    id="email"
+                    type="email"
+                    placeholder="Enter Email">
+
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter Password">
+
+            </div>
+
+            <button
+                type="submit"
+                class="login-submit">
+
+                Login
+
+            </button>
+
+        </form>
+
+        <div class="register-link">
+
+            Don't have an account?
+
+            <a href="#" onclick="openRegister(); return false;">
+
+                Register
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= REGISTER MODAL ================= -->
+
+<div class="modal-overlay" id="registerModal">
+
+    <div class="login-card">
+
+        <button class="close-btn" onclick="closeRegister()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="login-header">
+
+            <h2>Create Account 🚀</h2>
+
+            <p>Join Carbon Nexus AI</p>
+
+        </div>
+
+        <form id="registerForm">
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Full Name"
+                    required>
+
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Email Address"
+                    required>
+
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Password"
+                    required>
+
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-building"></i>
+
+                <select id="accountType">
+
+                    <option value="individual">👤 Individual</option>
+
+                    <option value="industry">🏭 Industry</option>
+
+                </select>
+
+            </div>
+
+            <button
+                type="submit"
+                class="login-submit">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+        <div class="register-link">
+
+            Already have an account?
+
+            <a href="#" onclick="backToLogin(); return false;">
+
+                Login
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= LOADING SCREEN ================= -->
+
+<div id="loadingScreen">
+
+    <div class="loader"></div>
+
+    <h2>Loading Dashboard...</h2>
+
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/script.js"></script>
+<!-- ================= LOGIN MODAL ================= -->
+
+<div class="login-modal" id="loginModal">
+
+    <div class="login-card">
+
+        <button class="close-btn" onclick="closeLogin()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="login-header">
+
+            <h2>Welcome Back 👋</h2>
+
+            <p>Login to Carbon Nexus AI</p>
+
+        </div>
+
+        <form id="loginForm">
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    placeholder="Email"
+                    required>
+
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    placeholder="Password"
+                    required>
+
+            </div>
+
+            <div class="remember">
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Remember Me
+
+                </label>
+
+                <a href="#">Forgot Password?</a>
+
+            </div>
+
+            <button
+                class="login-submit"
+                type="submit">
+
+                Login
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

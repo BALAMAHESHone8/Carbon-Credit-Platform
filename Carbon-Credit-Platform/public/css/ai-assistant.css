@@ -1,0 +1,588 @@
+/* ==========================================
+   CARBON NEXUS AI ASSISTANT
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #06111f,
+        #081c2d,
+        #092b3d
+    );
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+
+
+.ai-page{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+
+/* ==============================
+   SIDEBAR
+============================== */
+
+
+.sidebar{
+
+    width:270px;
+
+    background:#0b1725;
+
+    padding:35px 25px;
+
+    position:fixed;
+
+    height:100vh;
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#00d084;
+
+    margin-bottom:45px;
+
+}
+
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+
+.sidebar li{
+
+    padding:18px;
+
+    margin-bottom:12px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.sidebar li i{
+
+    margin-right:12px;
+
+}
+
+
+.sidebar li:hover,
+
+.sidebar .active{
+
+    background:linear-gradient(
+        135deg,
+        #00d084,
+        #00bfff
+    );
+
+    color:#07111b;
+
+}
+
+
+
+/* ==============================
+   MAIN
+============================== */
+
+
+.main{
+
+    margin-left:270px;
+
+    width:100%;
+
+    padding:40px;
+
+}
+
+
+
+.topbar{
+
+    margin-bottom:35px;
+
+}
+
+
+.topbar h1{
+
+    font-size:36px;
+
+}
+
+
+
+/* ==============================
+   AI BANNER
+============================== */
+
+
+.ai-banner{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+.ai-banner h2{
+
+    color:#00d084;
+
+    margin-bottom:12px;
+
+}
+
+
+.ai-banner p{
+
+    color:#c5d4e3;
+
+    line-height:28px;
+
+}
+/* ==========================================
+   CHAT CONTAINER
+========================================== */
+
+.chat-container{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(20px);
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* ==============================
+   CHAT HEADER
+============================== */
+
+
+.chat-header{
+
+    padding:22px 30px;
+
+    background:rgba(0,208,132,.12);
+
+    color:#00d084;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+.chat-header span{
+
+    margin-left:auto;
+
+    font-size:14px;
+
+    color:#00d084;
+
+}
+
+
+
+/* ==============================
+   CHAT BOX
+============================== */
+
+
+.chat-box{
+
+    height:400px;
+
+    padding:25px;
+
+    overflow-y:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+/* ==============================
+   MESSAGES
+============================== */
+
+
+.message{
+
+    max-width:75%;
+
+    padding:16px 20px;
+
+    border-radius:18px;
+
+    line-height:25px;
+
+    font-size:16px;
+
+}
+
+
+.ai-message{
+
+    background:rgba(0,208,132,.15);
+
+    border:1px solid rgba(0,208,132,.25);
+
+    align-self:flex-start;
+
+}
+
+
+.user-message{
+
+    background:rgba(0,194,255,.18);
+
+    border:1px solid rgba(0,194,255,.3);
+
+    align-self:flex-end;
+
+}
+
+
+
+/* ==============================
+   INPUT AREA
+============================== */
+
+
+.chat-input{
+
+    display:flex;
+
+    padding:20px;
+
+    gap:15px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+
+.chat-input input{
+
+    flex:1;
+
+    padding:16px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+.chat-input input::placeholder{
+
+    color:#9fb2c8;
+
+}
+
+
+.chat-input button{
+
+    width:55px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:linear-gradient(
+        135deg,
+        #00d084,
+        #00bfff
+    );
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.chat-input button:hover{
+
+    transform:scale(1.05);
+
+}
+/* ==========================================
+   QUICK ACTIONS
+========================================== */
+
+.quick-actions{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+.quick-actions h2{
+
+    color:#00d084;
+
+    margin-bottom:20px;
+
+}
+
+
+.quick-actions button{
+
+    padding:14px 25px;
+
+    margin-right:15px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        #00d084,
+        #00bfff
+    );
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.quick-actions button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 0 25px rgba(0,208,132,.35);
+
+}
+
+
+
+/* ==========================================
+   AI GLOW EFFECT
+========================================== */
+
+
+.chat-container{
+
+    animation:aiGlow 4s infinite;
+
+}
+
+
+@keyframes aiGlow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(0,208,132,0);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+        0 0 35px rgba(0,208,132,.2);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(0,208,132,0);
+
+    }
+
+}
+
+
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+
+.chat-box::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+
+.chat-box::-webkit-scrollbar-thumb{
+
+    background:#00d084;
+
+    border-radius:10px;
+
+}
+
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+
+@media(max-width:768px){
+
+
+.sidebar{
+
+    display:none;
+
+}
+
+
+.main{
+
+    margin-left:0;
+
+    padding:20px;
+
+}
+
+
+.topbar h1{
+
+    font-size:28px;
+
+}
+
+
+.message{
+
+    max-width:90%;
+
+}
+
+
+.chat-input{
+
+    flex-direction:column;
+
+}
+
+
+.chat-input button{
+
+    width:100%;
+
+    height:50px;
+
+}
+
+
+.quick-actions button{
+
+    width:100%;
+
+}
+
+
+}

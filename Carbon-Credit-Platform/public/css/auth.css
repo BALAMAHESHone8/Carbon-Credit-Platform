@@ -1,0 +1,670 @@
+/* ==========================================
+   CARBON NEXUS AI PREMIUM AUTH UI
+========================================== */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+
+    background:
+
+    linear-gradient(
+        rgba(0,15,10,.75),
+        rgba(0,15,10,.85)
+    ),
+
+    url("../assets/carbon-bg.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* ==========================================
+   FLOATING PARTICLES
+========================================== */
+
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+
+    background-image:
+
+    radial-gradient(#00ff8855 1px,transparent 1px);
+
+
+    background-size:40px 40px;
+
+
+    animation:particles 20s linear infinite;
+
+
+    pointer-events:none;
+
+}
+
+
+
+@keyframes particles{
+
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(-200px);
+
+}
+
+}
+
+
+
+/* ==========================================
+   HEADER LOGO
+========================================== */
+
+
+.brand{
+
+
+margin-top:40px;
+
+text-align:center;
+
+
+}
+
+
+
+.brand h1{
+
+
+font-size:48px;
+
+font-weight:800;
+
+letter-spacing:3px;
+
+
+}
+
+
+
+.brand span{
+
+
+color:#00e676;
+
+
+}
+
+
+
+.brand p{
+
+
+margin-top:10px;
+
+font-size:18px;
+
+color:#cbd5e1;
+
+
+}
+
+
+
+/* ==========================================
+   LOGIN CARD
+========================================== */
+
+
+.auth-box{
+
+
+margin-top:35px;
+
+
+width:520px;
+
+
+padding:45px;
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+
+border:
+
+1px solid rgba(0,255,130,.35);
+
+
+
+border-radius:25px;
+
+
+
+backdrop-filter:blur(20px);
+
+
+
+box-shadow:
+
+
+0 0 60px rgba(0,255,130,.25);
+
+
+
+animation:
+
+cardFloat 5s infinite ease-in-out;
+
+
+}
+
+
+
+@keyframes cardFloat{
+
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+
+}
+
+
+
+/* ==========================================
+   AI LOGO
+========================================== */
+
+
+.ai-logo{
+
+
+width:120px;
+
+height:120px;
+
+
+margin:auto;
+
+
+border-radius:50%;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+
+background:
+
+radial-gradient(
+circle,
+#00ff88,
+#004d2b
+);
+
+
+
+font-size:55px;
+
+
+
+box-shadow:
+
+
+0 0 40px #00ff88;
+
+
+
+animation:
+
+pulse 2s infinite;
+
+
+}
+
+
+
+@keyframes pulse{
+
+
+50%{
+
+box-shadow:
+
+0 0 70px #00ff88;
+
+}
+
+}
+
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+
+.auth-box h2{
+
+
+text-align:center;
+
+
+margin-top:25px;
+
+
+font-size:34px;
+
+
+}
+
+
+
+.subtitle{
+
+
+text-align:center;
+
+
+color:#cbd5e1;
+
+
+margin:10px 0 30px;
+
+
+}
+
+
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+
+.auth-box input{
+
+
+width:100%;
+
+
+padding:18px;
+
+
+margin:12px 0;
+
+
+border-radius:15px;
+
+
+border:
+
+1px solid rgba(0,255,130,.5);
+
+
+
+background:
+
+rgba(0,0,0,.45);
+
+
+
+color:white;
+
+
+font-size:16px;
+
+
+
+outline:none;
+
+
+}
+
+
+
+.auth-box input:focus{
+
+
+box-shadow:
+
+0 0 20px #00ff88;
+
+
+}
+
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+
+.auth-box button{
+
+
+width:100%;
+
+
+padding:18px;
+
+
+margin-top:20px;
+
+
+border:none;
+
+
+border-radius:15px;
+
+
+font-size:20px;
+
+
+font-weight:700;
+
+
+cursor:pointer;
+
+
+
+background:
+
+linear-gradient(
+90deg,
+#9cff00,
+#00d084
+);
+
+
+
+color:white;
+
+
+
+box-shadow:
+
+
+0 0 30px rgba(0,255,130,.5);
+
+
+
+transition:.3s;
+
+
+}
+
+
+
+.auth-box button:hover{
+
+
+transform:scale(1.05);
+
+
+box-shadow:
+
+
+0 0 50px #00ff88;
+
+
+}
+
+
+
+/* ==========================================
+   LINKS
+========================================== */
+
+
+.auth-box p{
+
+
+text-align:center;
+
+
+margin-top:25px;
+
+
+font-size:17px;
+
+
+color:#ddd;
+
+
+}
+
+
+
+.auth-box a{
+
+
+color:#00ff88;
+
+
+font-weight:bold;
+
+
+text-decoration:none;
+
+
+}
+
+
+
+/* ==========================================
+   FEATURES SECTION
+========================================== */
+
+
+.features{
+
+
+margin-top:40px;
+
+
+width:900px;
+
+
+display:grid;
+
+
+grid-template-columns:repeat(4,1fr);
+
+
+gap:20px;
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+
+padding:25px;
+
+
+border-radius:25px;
+
+
+backdrop-filter:blur(15px);
+
+
+
+}
+
+
+
+.feature{
+
+
+text-align:center;
+
+
+}
+
+
+
+.feature span{
+
+
+font-size:35px;
+
+
+display:block;
+
+
+margin-bottom:10px;
+
+
+}
+
+
+
+.feature h3{
+
+
+color:#00ff88;
+
+
+font-size:17px;
+
+
+}
+
+
+
+.feature p{
+
+
+font-size:13px;
+
+color:#ccc;
+
+
+}
+
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+
+footer{
+
+
+margin:30px;
+
+
+color:#aaa;
+
+
+}
+
+
+
+footer span{
+
+
+color:#00ff88;
+
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+
+.auth-box{
+
+width:90%;
+
+}
+
+
+.features{
+
+width:90%;
+
+grid-template-columns:1fr;
+
+}
+
+
+.brand h1{
+
+font-size:32px;
+
+}
+
+
+}

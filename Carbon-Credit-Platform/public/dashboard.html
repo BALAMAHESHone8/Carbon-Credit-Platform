@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Carbon Nexus AI Dashboard</title>
+
+<link rel="stylesheet"
+href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+🌍 Carbon Nexus AI
+
+</div>
+
+<ul>
+
+<li class="active">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</li>
+
+<li onclick="window.location.href='calculator.html'">
+
+<i class="fa-solid fa-leaf"></i>
+
+Carbon Calculator
+
+</li>
+<li>
+
+<i class="fa-solid fa-chart-line"></i>
+
+Analytics
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-industry"></i>
+
+Industries
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-robot"></i>
+
+AI Assistant
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-medal"></i>
+
+Carbon Credits
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-user"></i>
+
+Profile
+<a href="profile.html">
+
+👤 Profile
+
+</a>
+<a onclick="logout()" class="logout-btn">
+
+🚪 Logout
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>
+
+Earth's Digital Twin
+
+</h1>
+
+<div class="user">
+
+<i class="fa-solid fa-bell"></i>
+
+<img src="https://i.pravatar.cc/100" alt="user">
+
+</div>
+
+</div>
+<!-- ================= CARDS ================= -->
+
+<div class="cards">
+
+    <div class="card">
+
+        <i class="fa-solid fa-cloud"></i>
+
+       <h2 id="dashboardCarbon">
+0 kg
+</h2>
+
+        <p>Carbon Footprint</p>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <h2 id="dashboardCredits">
+0
+</h2>
+
+        <p>Carbon Credits</p>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-tree"></i>
+
+        <h2 id="dashboardTrees">
+0
+</h2>
+
+        <p>Trees Saved</p>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-brain"></i>
+
+        <h2 id="dashboardScore">
+0%
+</h2>
+
+        <p>AI Sustainability Score</p>
+
+    </div>
+
+</div>
+
+<!-- ================= CHART SECTION ================= -->
+
+<div class="chart-container">
+
+    <div class="chart-card">
+
+        <h2>Monthly Carbon Emissions</h2>
+
+        <canvas id="lineChart"></canvas>
+
+    </div>
+
+    <div class="chart-card">
+
+        <h2>Emission Sources</h2>
+
+        <canvas id="pieChart"></canvas>
+
+    </div>
+
+</div>
+
+<!-- ================= AI SECTION ================= -->
+
+<div class="ai-section">
+<div class="ai-card">
+
+
+<h2>
+🤖 AI Sustainability Assistant
+</h2>
+
+
+
+<div class="ai-score-card">
+
+
+<h3>
+AI Sustainability Score
+</h3>
+
+
+<h1 id="aiScore">
+0%
+</h1>
+
+
+</div>
+
+
+
+
+<div class="ai-details">
+
+
+<p>
+🌍 Carbon Emission:
+<strong id="aiEmission">
+0 kg
+</strong>
+</p>
+
+
+<p>
+🌱 Carbon Credits:
+<strong id="aiCredits">
+0
+</strong>
+</p>
+
+
+<p>
+🏆 Eco Level:
+<strong id="aiLevel">
+Beginner
+</strong>
+</p>
+
+
+</div>
+
+
+
+
+<h3>
+🌿 AI Recommendations
+</h3>
+
+
+<ul id="aiSuggestions">
+
+
+</ul>
+
+
+
+</div>
+    <div class="earth-card">
+
+        <h2>
+
+            Digital Earth
+
+        </h2>
+
+        <img
+            src="assets/images/earth.png"
+            class="dashboard-earth"
+            alt="Earth">
+
+    </div>
+
+</div>
+<!-- ================= INDUSTRY STATUS ================= -->
+
+<div class="industry-section">
+
+    <div class="industry-card">
+
+<h2>🏭 Industry Monitoring</h2>
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Industry</th>
+
+<th>Emission</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="industryTable">
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+<!-- ================= LEADERBOARD ================= -->
+
+<h2>🏆 Top Carbon Savers</h2>
+
+<div id="leaderboardPreview">
+
+</div>
+
+<button onclick="window.location.href='leaderboard.html'">
+    View Full Leaderboard
+</button>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 Carbon Nexus AI
+
+        | Earth's Digital Twin Platform
+
+    </p>
+
+</footer>
+
+</div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/authGuard.js"></script>
+<script src="js/logout.js"></script>
+</body>
+
+</html>

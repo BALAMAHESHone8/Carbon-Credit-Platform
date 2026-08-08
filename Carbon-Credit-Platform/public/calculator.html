@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Carbon Calculator | Carbon Nexus AI</title>
+
+<link rel="stylesheet"
+href="css/calculator.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="calculator-page">
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+🌍 Carbon Nexus AI
+
+</div>
+
+<ul>
+
+<li onclick="window.location.href='dashboard.html'">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</li>
+
+<li class="active">
+
+<i class="fa-solid fa-leaf"></i>
+
+Carbon Calculator
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-chart-line"></i>
+
+Analytics
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-industry"></i>
+
+Industries
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-robot"></i>
+
+AI Assistant
+
+</li>
+
+</ul>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>
+
+Carbon Footprint Calculator
+
+</h1>
+
+</div>
+
+<div class="calculator-card">
+
+<h2>
+
+🌱 Calculate Your Carbon Footprint
+
+</h2>
+<form id="carbonForm">
+
+    <div class="input-grid">
+
+        <div class="input-group">
+
+            <label>
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Electricity (kWh)
+
+            </label>
+
+            <input
+                type="number"
+                id="electricity"
+                placeholder="Enter electricity usage"
+                required>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+
+                <i class="fa-solid fa-gas-pump"></i>
+
+                Petrol (Litres)
+
+            </label>
+
+            <input
+                type="number"
+                id="petrol"
+                placeholder="Enter petrol usage"
+                required>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+
+                <i class="fa-solid fa-fire"></i>
+
+                LPG Cylinders
+
+            </label>
+
+            <input
+                type="number"
+                id="lpg"
+                placeholder="Enter LPG cylinders"
+                required>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+
+                <i class="fa-solid fa-plane"></i>
+
+                Flight Distance (km)
+
+            </label>
+
+            <input
+                type="number"
+                id="flight"
+                placeholder="Enter flight distance"
+                required>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+
+                <i class="fa-solid fa-trash"></i>
+
+                Waste Generated (kg)
+
+            </label>
+
+            <input
+                type="number"
+                id="waste"
+                placeholder="Enter waste generated"
+                required>
+
+        </div>
+
+    </div>
+
+    <button
+        type="submit"
+        class="calculate-btn">
+
+        <i class="fa-solid fa-calculator"></i>
+
+        Calculate Carbon Footprint
+
+    </button>
+
+</form>
+<!-- ================= RESULTS ================= -->
+
+<div class="result-section">
+
+    <div class="result-card">
+
+        <i class="fa-solid fa-cloud"></i>
+
+        <h3>Total CO₂ Emission</h3>
+
+        <h2 id="totalCarbon">
+
+            0 kg
+
+        </h2>
+
+    </div>
+
+    <div class="result-card">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <h3>Carbon Credits</h3>
+
+        <h2 id="carbonCredits">
+
+            0
+
+        </h2>
+
+    </div>
+
+    <div class="result-card">
+
+        <i class="fa-solid fa-tree"></i>
+
+        <h3>Trees Required</h3>
+
+        <h2 id="treesRequired">
+
+            0
+
+        </h2>
+
+    </div>
+
+</div>
+
+<!-- ================= AI RECOMMENDATIONS ================= -->
+
+<div class="ai-result">
+
+    <h2>
+
+        🤖 AI Sustainability Suggestions
+        <!-- ================= RESULTS ================= -->
+
+<div class="result-section">
+
+    ...
+    
+</div>
+
+<!-- ================= CHART ================= -->
+
+<div class="chart-card">
+
+    <h2>
+
+        📊 Emission Breakdown
+
+    </h2>
+
+    <canvas id="carbonChart"></canvas>
+
+</div>
+
+<!-- ================= AI SUGGESTIONS ================= -->
+
+<div class="ai-result">
+
+    <h2>
+
+        🤖 AI Sustainability Suggestions
+
+    </h2>
+
+    <ul id="aiSuggestions">
+
+        <li>Fill the form and click Calculate.</li>
+
+    </ul>
+
+</div>
+    </h2>
+
+    <ul id="aiSuggestions">
+
+        <li>Fill the form and click Calculate.</li>
+
+    </ul>
+
+</div>
+
+</div>
+
+</div>
+<!-- ================= PDF REPORT ================= -->
+
+<div class="report-section">
+
+    <button
+        id="downloadReport"
+        class="calculate-btn">
+
+        <i class="fa-solid fa-file-pdf"></i>
+
+        Download PDF Report
+
+    </button>
+
+</div>
+
+<script src="js/calculator.js"></script>
+
+</body>
+
+</html>

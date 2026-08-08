@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Leaderboard | Carbon Nexus AI</title>
+
+<link rel="stylesheet"
+href="css/leaderboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="leaderboard-page">
+
+
+<!-- ================= SIDEBAR ================= -->
+
+
+<div class="sidebar">
+
+
+<div class="logo">
+
+🌍 Carbon Nexus AI
+
+</div>
+
+
+<ul>
+
+
+<li onclick="window.location.href='dashboard.html'">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</li>
+
+
+<li onclick="window.location.href='calculator.html'">
+
+<i class="fa-solid fa-leaf"></i>
+
+Calculator
+
+</li>
+
+
+<li onclick="window.location.href='wallet.html'">
+
+<i class="fa-solid fa-wallet"></i>
+
+Wallet
+
+</li>
+
+
+<li class="active">
+
+<i class="fa-solid fa-ranking-star"></i>
+
+Leaderboard
+
+</li>
+
+
+<li>
+
+<i class="fa-solid fa-robot"></i>
+
+AI Assistant
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+<!-- ================= MAIN ================= -->
+
+
+<div class="main">
+
+
+<div class="topbar">
+
+
+<h1>
+
+🏆 Carbon Champions
+
+</h1>
+
+
+<div class="profile">
+
+<i class="fa-solid fa-bell"></i>
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+
+</div>
+
+
+<div class="leader-banner">
+
+
+<h2>
+
+Global Sustainability Ranking
+
+</h2>
+
+
+<p>
+
+Compete with eco-friendly users and earn your place among Earth Guardians.
+
+</p>
+
+
+</div>
+<!-- ================= TOP CHAMPIONS ================= -->
+
+<div class="champions">
+
+
+    <div class="champion-container" id="championContainer">
+
+</div>
+
+
+<!-- ================= RANKING TABLE ================= -->
+
+
+<div class="ranking-card">
+
+
+<h2>
+
+📊 Global Ranking
+
+</h2>
+
+
+<table>
+
+<tbody id="leaderboardTable">
+
+</tbody>
+
+</table>
+<tr>
+
+<th>Rank</th>
+
+<th>User</th>
+
+<th>Credits</th>
+
+<th>Level</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+
+<tr>
+
+<td>1</td>
+
+<td>Rahul</td>
+
+<td>1250</td>
+
+<td>🌍 Earth Guardian</td>
+
+</tr>
+
+
+<tr>
+
+<td>2</td>
+
+<td>Priya</td>
+
+<td>980</td>
+
+<td>🌿 Green Warrior</td>
+
+</tr>
+
+
+<tr>
+
+<td>3</td>
+
+<td>Arjun</td>
+
+<td>750</td>
+
+<td>🌱 Eco Starter</td>
+
+</tr>
+
+
+<tr>
+
+<td>4</td>
+
+<td>You</td>
+
+<td id="userCredits">
+
+0</td>
+
+<td id="userLevel">
+
+Beginner
+
+</td>
+
+</tr>
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+<!-- ================= YOUR RANK ================= -->
+
+
+<div class="your-rank">
+
+
+    <h2>
+
+        🌱 Your Sustainability Rank
+
+    </h2>
+
+
+    <div class="rank-box">
+
+
+        <div>
+
+            <h3>
+
+                Current Rank
+
+            </h3>
+
+            <h1 id="currentRank">
+
+                #4
+
+            </h1>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+
+                Carbon Credits
+
+            </h3>
+
+            <h1 id="rankCredits">
+
+                0
+
+            </h1>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+
+                Eco Level
+
+            </h3>
+
+            <h1 id="rankLevel">
+
+                Beginner
+
+            </h1>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ================= AI MESSAGE ================= -->
+
+
+<div class="leader-ai">
+
+
+<h2>
+
+🤖 AI Competition Insight
+
+</h2>
+
+
+<p>
+
+Keep reducing your carbon footprint and earning credits.
+
+You are getting closer to becoming an Earth Guardian!
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+<script src="js/leaderboard.js"></script>
+<script src="js/authGuard.js"></script>
+
+
+</body>
+
+</html>

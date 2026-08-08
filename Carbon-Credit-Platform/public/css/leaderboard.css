@@ -1,0 +1,629 @@
+/* ==========================================
+   CARBON NEXUS AI LEADERBOARD
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #06111f,
+        #081c2d,
+        #092b3d
+    );
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+
+
+.leaderboard-page{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+
+
+/* ==============================
+   SIDEBAR
+============================== */
+
+
+.sidebar{
+
+    width:270px;
+
+    background:#0b1725;
+
+    padding:35px 25px;
+
+    position:fixed;
+
+    height:100vh;
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#00d084;
+
+    margin-bottom:45px;
+
+}
+
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+
+.sidebar li{
+
+    padding:18px;
+
+    margin-bottom:12px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.sidebar li i{
+
+    margin-right:12px;
+
+}
+
+
+.sidebar li:hover,
+
+.sidebar .active{
+
+    background:linear-gradient(
+        135deg,
+        #00d084,
+        #00bfff
+    );
+
+    color:#07111b;
+
+}
+
+
+
+/* ==============================
+   MAIN
+============================== */
+
+
+.main{
+
+    margin-left:270px;
+
+    width:100%;
+
+    padding:40px;
+
+}
+
+
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+
+.topbar h1{
+
+    font-size:36px;
+
+}
+
+
+.profile{
+
+    display:flex;
+
+    gap:20px;
+
+    font-size:22px;
+
+}
+
+
+
+/* ==============================
+   BANNER
+============================== */
+
+
+.leader-banner{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+.leader-banner h2{
+
+    color:#00d084;
+
+    margin-bottom:12px;
+
+}
+
+
+.leader-banner p{
+
+    color:#c5d4e3;
+
+}
+/* ==========================================
+   TOP CHAMPIONS
+========================================== */
+
+.champions{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}
+
+
+.champion-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+
+}
+
+
+.champion-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+.champion-card .rank{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}
+
+
+.champion-card h2{
+
+    margin-bottom:10px;
+
+}
+
+
+.champion-card p{
+
+    color:#c5d4e3;
+
+    margin-bottom:15px;
+
+}
+
+
+.champion-card h3{
+
+    color:#00d084;
+
+    font-size:24px;
+
+}
+
+
+/* Medal Colors */
+
+
+.gold{
+
+    box-shadow:
+
+    0 0 35px rgba(255,215,0,.25);
+
+}
+
+
+.silver{
+
+    box-shadow:
+
+    0 0 35px rgba(192,192,192,.2);
+
+}
+
+
+.bronze{
+
+    box-shadow:
+
+    0 0 35px rgba(205,127,50,.25);
+
+}
+
+
+
+/* ==========================================
+   RANKING TABLE
+========================================== */
+
+
+.ranking-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    backdrop-filter:blur(20px);
+
+    margin-bottom:35px;
+
+}
+
+
+.ranking-card h2{
+
+    color:#00d084;
+
+    margin-bottom:25px;
+
+}
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+th{
+
+    color:#00d084;
+
+    text-align:left;
+
+}
+
+
+th,
+td{
+
+    padding:16px;
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+td{
+
+    color:#d5e3ef;
+
+}
+/* ==========================================
+   YOUR RANK SECTION
+========================================== */
+
+.your-rank{
+
+    margin-top:35px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+.your-rank h2{
+
+    color:#00d084;
+
+    margin-bottom:25px;
+
+}
+
+
+.rank-box{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+.rank-box div{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+
+.rank-box h3{
+
+    color:#c5d4e3;
+
+    margin-bottom:15px;
+
+}
+
+
+.rank-box h1{
+
+    color:white;
+
+    font-size:32px;
+
+}
+
+
+
+/* ==========================================
+   AI INSIGHT
+========================================== */
+
+
+.leader-ai{
+
+    margin-top:35px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(0,208,132,.15),
+
+        rgba(0,194,255,.12)
+
+    );
+
+    border:1px solid rgba(255,255,255,.1);
+
+}
+
+
+.leader-ai h2{
+
+    color:#00d084;
+
+    margin-bottom:15px;
+
+}
+
+
+.leader-ai p{
+
+    color:#d5e3ef;
+
+    line-height:28px;
+
+}
+
+
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+
+.champion-card,
+.ranking-card,
+.your-rank,
+.leader-ai{
+
+    animation:slideUp .6s ease;
+
+}
+
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+
+@media(max-width:1100px){
+
+
+.champions{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.rank-box{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.sidebar{
+
+    display:none;
+
+}
+
+
+.main{
+
+    margin-left:0;
+
+    padding:20px;
+
+}
+
+
+.topbar h1{
+
+    font-size:28px;
+
+}
+
+
+table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+
+}
+.champion-container{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+width:100%;
+
+}
+
+
+
+.champion-card{
+
+min-height:260px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+}

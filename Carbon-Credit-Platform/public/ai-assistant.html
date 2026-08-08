@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AI Assistant | Carbon Nexus AI</title>
+
+<link rel="stylesheet"
+href="css/ai-assistant.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="ai-page">
+
+
+<!-- ================= SIDEBAR ================= -->
+
+
+<div class="sidebar">
+
+
+<div class="logo">
+
+🌍 Carbon Nexus AI
+
+</div>
+
+
+<ul>
+
+
+<li onclick="window.location.href='dashboard.html'">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</li>
+
+
+<li onclick="window.location.href='calculator.html'">
+
+<i class="fa-solid fa-leaf"></i>
+
+Calculator
+
+</li>
+
+
+<li onclick="window.location.href='wallet.html'">
+
+<i class="fa-solid fa-wallet"></i>
+
+Wallet
+
+</li>
+
+
+<li onclick="window.location.href='leaderboard.html'">
+
+<i class="fa-solid fa-ranking-star"></i>
+
+Leaderboard
+
+</li>
+
+
+<li class="active">
+
+<i class="fa-solid fa-robot"></i>
+
+AI Assistant
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+<!-- ================= MAIN ================= -->
+
+
+<div class="main">
+
+
+<div class="topbar">
+
+<h1>
+
+🤖 AI Sustainability Assistant
+
+</h1>
+
+
+</div>
+
+
+<div class="ai-banner">
+
+
+<h2>
+
+Your Personal Green Advisor
+
+</h2>
+
+
+<p>
+
+Ask anything about carbon reduction,
+sustainability and environmental impact.
+
+</p>
+
+
+</div>
+<!-- ================= AI CHAT ================= -->
+
+
+<div class="chat-container">
+
+
+    <div class="chat-header">
+
+        <i class="fa-solid fa-robot"></i>
+
+        Carbon AI Assistant
+
+        <span>
+
+            Online 🟢
+
+        </span>
+
+    </div>
+
+
+
+    <div class="chat-box" id="chatBox">
+
+
+        <div class="message ai-message">
+
+            Hello 👋
+
+            I am Carbon AI.
+
+            Ask me anything about sustainability,
+            carbon reduction and eco-friendly habits.
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="chat-input">
+
+
+        <input
+            type="text"
+            id="userMessage"
+            placeholder="Ask about carbon reduction...">
+
+
+        <button
+            onclick="sendMessage()">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ================= QUICK QUESTIONS ================= -->
+
+
+<div class="quick-actions">
+<button onclick="quickAsk('Show my carbon footprint')">
+
+My Carbon Report
+
+</button>
+
+<h2>
+
+💡 Try asking
+
+</h2>
+
+
+<button onclick="quickAsk('How can I reduce my carbon footprint?')">
+
+Reduce Carbon
+
+</button>
+
+
+<button onclick="quickAsk('How many trees can offset CO2?')">
+
+Trees Offset
+
+</button>
+
+
+<button onclick="quickAsk('Suggest sustainable habits')">
+
+Green Tips
+
+</button>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<script src="js/ai-assistant.js"></script>
+
+
+</body>
+
+</html>

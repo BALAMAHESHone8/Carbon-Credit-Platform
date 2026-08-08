@@ -1,0 +1,507 @@
+/* ==========================================
+   CARBON CALCULATOR
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+body{
+
+    background:linear-gradient(135deg,#06111f,#081a2f,#0c2438);
+
+    color:white;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    position:relative;
+
+}
+
+.calculator-page{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* ==============================
+   SIDEBAR
+============================== */
+
+.sidebar{
+
+    width:270px;
+
+    background:#0b1725;
+
+    padding:35px 25px;
+
+    position:fixed;
+
+    height:100vh;
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#00d084;
+
+    margin-bottom:45px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    padding:18px;
+
+    margin-bottom:12px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.sidebar li i{
+
+    margin-right:12px;
+
+}
+
+.sidebar li:hover,
+
+.sidebar .active{
+
+    background:linear-gradient(135deg,#00d084,#00bfff);
+
+    color:#07111b;
+
+}
+
+/* ==============================
+   MAIN
+============================== */
+
+.main{
+
+    margin-left:270px;
+
+    width:100%;
+
+    padding:40px;
+
+}
+
+.topbar{
+
+    margin-bottom:40px;
+
+}
+
+.topbar h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+}
+
+.calculator-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    backdrop-filter:blur(25px);
+
+    padding:35px;
+
+}
+
+.calculator-card h2{
+
+    margin-bottom:30px;
+
+    color:#00d084;
+
+}
+/* ==========================================
+   INPUT GRID
+========================================== */
+
+.input-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.input-group label{
+
+    margin-bottom:10px;
+
+    color:#00d084;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.input-group label i{
+
+    margin-right:8px;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.input-group input::placeholder{
+
+    color:#a8b6c5;
+
+}
+
+.input-group input:focus{
+
+    border:1px solid #00d084;
+
+    background:rgba(255,255,255,.12);
+
+    box-shadow:0 0 15px rgba(0,208,132,.25);
+
+}
+
+/* ==========================================
+   CALCULATE BUTTON
+========================================== */
+
+.calculate-btn{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(135deg,#00d084,#00bfff);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+/* ==========================================
+.calculate-btn i{
+
+    margin-right:10px;
+
+}
+
+.calculate-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 0 25px rgba(0,208,132,.35);
+
+}
+/* ==========================================
+   RESULT SECTION
+========================================== */
+
+.result-section{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.result-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    backdrop-filter:blur(20px);
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.result-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px rgba(0,208,132,.35);
+
+}
+
+.result-card i{
+
+    font-size:40px;
+
+    color:#00d084;
+
+    margin-bottom:15px;
+
+}
+
+.result-card h3{
+
+    color:#c8d6e5;
+
+    margin-bottom:12px;
+
+}
+
+.result-card h2{
+
+    font-size:34px;
+
+    color:#ffffff;
+
+}
+
+/* ==========================================
+   AI RESULT
+========================================== */
+
+.ai-result{
+
+    margin-top:35px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.ai-result h2{
+
+    color:#00d084;
+
+    margin-bottom:20px;
+
+}
+
+.ai-result ul{
+
+    padding-left:20px;
+
+}
+
+.ai-result li{
+
+    margin-bottom:12px;
+
+    color:#d5e3ef;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1100px){
+
+.input-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.result-section{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+
+display:none;
+
+}
+
+.main{
+
+margin-left:0;
+
+padding:20px;
+
+}
+
+.topbar h1{
+
+font-size:28px;
+
+}
+
+.calculator-card{
+
+padding:25px;
+
+}
+
+}
+/* ==========================================
+   BACKGROUND GLOW
+========================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:#00d084;
+
+    filter:blur(180px);
+
+    opacity:.15;
+
+    top:-120px;
+
+    left:-120px;
+
+    z-index:-1;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:#00bfff;
+
+    filter:blur(180px);
+
+    opacity:.12;
+
+    bottom:-150px;
+
+    right:-120px;
+
+    z-index:-1;
+
+}
+/* ==============================
+   PDF BUTTON
+============================== */
+
+.report-section{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+#downloadReport{
+
+    max-width:350px;
+
+}

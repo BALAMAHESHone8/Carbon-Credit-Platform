@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Carbon Wallet | Carbon Nexus AI</title>
+
+<link rel="stylesheet"
+href="css/wallet.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="wallet-page">
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        🌍 Carbon Nexus AI
+
+    </div>
+
+
+    <ul>
+
+        <li onclick="window.location.href='dashboard.html'">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </li>
+
+
+        <li onclick="window.location.href='calculator.html'">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            Carbon Calculator
+
+        </li>
+
+
+        <li class="active">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            Carbon Wallet
+
+        </li>
+
+
+        <li>
+
+            <i class="fa-solid fa-ranking-star"></i>
+
+            Leaderboard
+
+        </li>
+
+
+        <li>
+
+            <i class="fa-solid fa-robot"></i>
+
+            AI Assistant
+
+        </li>
+
+
+    </ul>
+
+
+</div>
+
+
+<!-- ================= MAIN ================= -->
+
+
+<div class="main">
+
+
+<div class="topbar">
+
+    <h1>
+
+        Carbon Credit Wallet
+
+    </h1>
+
+
+    <div class="profile">
+
+        <i class="fa-solid fa-bell"></i>
+
+        <i class="fa-solid fa-user"></i>
+
+    </div>
+
+
+</div>
+
+
+<!-- ================= WALLET HEADER ================= -->
+
+
+<div class="wallet-banner">
+
+
+    <div>
+
+        <h2>
+
+            🌱 Your Sustainability Wallet
+
+        </h2>
+
+
+        <p>
+
+            Track your carbon credits,
+            emission reduction and environmental impact.
+
+        </p>
+
+
+    </div>
+
+
+</div>
+<!-- ================= WALLET CARDS ================= -->
+
+<div class="wallet-cards">
+
+
+    <div class="wallet-card">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <h3>Carbon Credits</h3>
+
+        <h2 id="walletCredits">
+
+            0
+
+        </h2>
+
+        <p>Available Credits</p>
+
+    </div>
+
+
+
+    <div class="wallet-card">
+
+        <i class="fa-solid fa-cloud-arrow-down"></i>
+
+        <h3>CO₂ Reduced</h3>
+
+        <h2 id="walletCarbon">
+
+            0 kg
+
+        </h2>
+
+        <p>Total Reduction</p>
+
+    </div>
+
+
+
+    <div class="wallet-card">
+
+        <i class="fa-solid fa-tree"></i>
+
+        <h3>Trees Supported</h3>
+
+        <h2 id="walletTrees">
+
+            0
+
+        </h2>
+
+        <p>Environmental Impact</p>
+
+    </div>
+
+
+
+    <div class="wallet-card">
+
+        <i class="fa-solid fa-medal"></i>
+
+        <h3>Eco Level</h3>
+
+        <h2 id="ecoLevel">
+
+            Beginner
+
+        </h2>
+
+        <p>Your Sustainability Rank</p>
+
+    </div>
+
+
+</div>
+
+
+<!-- ================= CREDIT HISTORY ================= -->
+
+
+<div class="history-card">
+
+
+<h2>
+
+    📜 Credit History
+
+</h2>
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>Activity</th>
+
+<th>Credits</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody>
+
+
+<tr>
+
+<td>07 Aug 2026</td>
+
+<td>Carbon Reduction</td>
+
+<td>+50</td>
+
+</tr>
+
+
+<tr>
+
+<td>05 Aug 2026</td>
+
+<td>Energy Saving</td>
+
+<td>+30</td>
+
+</tr>
+
+
+<tr>
+
+<td>01 Aug 2026</td>
+
+<td>Tree Plantation</td>
+
+<td>+20</td>
+
+</tr>
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+<!-- ================= REWARD SECTION ================= -->
+
+<div class="reward-section">
+
+
+    <div class="reward-card">
+
+
+        <h2>
+
+            🏆 Sustainability Reward
+
+        </h2>
+
+
+        <p id="rewardMessage">
+
+            Complete more eco-friendly actions
+            to unlock rewards.
+
+        </p>
+
+
+        <div class="progress-bar">
+
+
+            <div class="progress" id="creditProgress">
+
+            </div>
+
+
+        </div>
+
+
+        <span id="progressText">
+
+            0% towards next level
+
+        </span>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ================= AI MESSAGE ================= -->
+
+
+<div class="wallet-ai">
+
+
+    <h2>
+
+        🤖 AI Sustainability Insight
+
+    </h2>
+
+
+    <p>
+
+        Your actions are helping reduce environmental
+        impact. Continue saving energy and reducing
+        emissions to earn more carbon credits.
+
+    </p>
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+<script src="js/wallet.js"></script>
+<script src="js/authGuard.js"></script>
+
+</body>
+
+</html>
